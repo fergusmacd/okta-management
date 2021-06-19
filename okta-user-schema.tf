@@ -10,7 +10,7 @@ locals {
 }
 
 resource "okta_user_schema" "schemas" {
-  for_each = local.schemas
+  for_each    = local.schemas
   index       = each.value.index
   title       = each.value.title
   type        = each.value.type

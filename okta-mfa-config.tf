@@ -8,7 +8,7 @@ locals {
 }
 
 resource "okta_factor" "factors" {
-  for_each = local.factors
+  for_each    = local.factors
   provider_id = each.value.provider_id
-  active = each.value.active
+  active      = each.value.active
 }
