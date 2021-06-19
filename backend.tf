@@ -1,10 +1,10 @@
+# add the terraform cloud backend for running locally
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "<your-org>"
-
+    organization = "mononoke"
     workspaces {
-      name = "<change-me>"
+      name = "okta-management"
     }
   }
 }
